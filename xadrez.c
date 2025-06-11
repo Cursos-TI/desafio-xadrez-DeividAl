@@ -9,10 +9,11 @@ int main () {
     printf("1. Torre\n");
     printf("2. Rainha\n");
     printf("3. Bispo\n");
+    printf("4. Cavalo\n");
     printf("Selecione uma peca de acordo com o numero: \n");
     scanf("%d", &opcao);                //Menu de escolha de peça para mover
 
-        if(opcao ==1){
+    if(opcao ==1){
 
         printf("Escolha para qual direcao a peca ira se mover: \n");
         printf("1. Direta\n");
@@ -65,15 +66,23 @@ int main () {
         }
     }
     else if (opcao ==3) {
-        printf("Movendo a Bispo...\n");                             //movimento do bispo
+        printf("Movendo a Bispo...\n");
         do {
             printf("Direita, Cima\n");
             movimentopeca++;
         }while (movimentopeca < 5);
     }
+    else if (opcao ==4) {
+        printf("Movendo o cavalo...\n");
+        for (movimentopeca= 1; movimentopeca <= 1; movimentopeca++) {        //movimento de 1 casa com cavalo
+            printf("Direita\n");
+            for (int cavalo =1; cavalo <= 2; cavalo++) {            //adicionado uma variavel para o movimento de 2 casas com cavalo
+                printf("Cima\n");
+            }
+        }
+    }
     else {
         printf("Opcao invalida\n");
     }
-
     return 0;
 }
